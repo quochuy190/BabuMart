@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/app_bar_all" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_ctv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_avata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_main"
+                android:padding="@dimen/pading_edt_register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_avata_ctv_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginRight="@dimen/pading_edt_register"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_avata_all"
+                    app:civ_border_color="@color/button"
+                    app:civ_border_width="0.5dp"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.2" />
+
+                <TextView
+                    android:id="@+id/txt_taianh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/pading_icon"
+                    android:text="Tải ảnh lên"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="@+id/img_avata_ctv_detail"
+                    app:layout_constraintStart_toStartOf="@id/img_avata_ctv_detail"
+                    app:layout_constraintTop_toBottomOf="@+id/img_avata_ctv_detail" />
+
+                <TextView
+                    android:id="@+id/txt_name_ctv_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text="Mã CTV:"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/txt_user_ctv_detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_user_ctv_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="1dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_name_ctv_detail" />
+
+                <ImageView
+                    android:id="@+id/img_copy_code"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:padding="@dimen/stoker_edt"
+                    android:src="@drawable/icon_copy_white"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_name_ctv_detail"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toEndOf="@+id/txt_name_ctv_detail"
+                    app:layout_constraintTop_toTopOf="@+id/txt_name_ctv_detail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txt_title_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_app"
+                android:padding="@dimen/dp10"
+                android:text="Thông tin cá nhân"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_user"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_avata" />
+
+            <LinearLayout
+                android:id="@+id/ll_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_lable_name_ctv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/stoker_edt"
+                    android:text="Họ và tên:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edt_name_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edt_name_ctv" />
+
+                <EditText
+                    android:id="@+id/edt_name_ctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/dp5"
+
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_lable_birthday_ctv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Ngày sinh:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/edt_birthday_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edt_birthday_ctv" />
+
+                <EditText
+                    android:id="@+id/edt_birthday_ctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+                    android:focusable="false"
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_gender_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Giới tính:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_gender_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_gender_ctv" />
+
+                <TextView
+                    android:id="@+id/txt_gender_ctv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:focusable="false"
+                    android:gravity="center_vertical|right"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/height_spinner"
+                    android:paddingBottom="@dimen/dp5"
+                    android:text="Nam"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_gender_lable"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+
+                    android:id="@+id/icon_down_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/bg_app"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_gender_ctv"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_gender_ctv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_lable_email_ctv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:padding="1dp"
+                    android:text="Email:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/edt_email_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/edt_email_ctv" />
+
+                <EditText
+                    android:id="@+id/edt_email_ctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+                    android:gravity="right|center_vertical"
+
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:padding="@dimen/dp5"
+
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_city_ctv_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Tỉnh/Thành phố: "
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_city_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_city_ctv" />
+
+                <TextView
+                    android:id="@+id/txt_city_ctv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:gravity="center_vertical|right"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/height_spinner"
+                    android:paddingBottom="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_city_ctv_lable"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_down_city"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/bg_app"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_city_ctv"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_city_ctv" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_district"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_district_ctv_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Quận/Huyện: "
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_district_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_district_ctv" />
+
+                <TextView
+                    android:id="@+id/txt_district_ctv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:gravity="center_vertical|right"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/height_spinner"
+                    android:paddingBottom="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_district_ctv_lable"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_down_district"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/bg_app"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_district_ctv"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_district_ctv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_ward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_ward_ctv_lable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Phường/Xã: "
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/txt_ward_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_ward_ctv" />
+
+                <TextView
+                    android:id="@+id/txt_ward_ctv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:gravity="center_vertical|right"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/height_spinner"
+                    android:paddingBottom="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_ward_ctv_lable"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_down_ward"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/bg_app"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_ward_ctv"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/txt_ward_ctv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_diachi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_title_diachi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Địa chỉ:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <EditText
+                    android:id="@+id/edt_address_ctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center_vertical|right"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/dp5"
+                    android:paddingEnd="@dimen/pading_icon"
+                    android:paddingRight="@dimen/pading_icon"
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_cmnd_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_title_cmnd_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Số cmnd:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <EditText
+                    android:id="@+id/edt_cmnd_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:padding="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_code_ctv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_code_ctv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Mã giới thiệu:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
+                <ImageView
+                    android:id="@+id/img_1_cmnd"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/spr_bg_item_product_home"
+                    android:padding="@dimen/dp5"
+                    android:src="@drawable/ic_camera_color"
+                    app:layout_constraintDimensionRatio="2:1.3"
+                    app:layout_constraintEnd_toStartOf="@+id/img_2_cmnd"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.43" />
+
+                <TextView
+                    android:id="@+id/txt_cmnd_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/stoker_edt"
+                    android:text="Ảnh mặt trước cmnd"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="@id/img_1_cmnd"
+                    app:layout_constraintStart_toStartOf="@id/img_1_cmnd"
+                    app:layout_constraintTop_toBottomOf="@+id/img_1_cmnd" />
+
+                <TextView
+                    android:id="@+id/txt_cmnd_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/stoker_edt"
+                    android:text="Ảnh mặt sau cmnd"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="@id/img_2_cmnd"
+                    app:layout_constraintStart_toStartOf="@id/img_2_cmnd"
+                    app:layout_constraintTop_toBottomOf="@+id/img_2_cmnd" />
+
+                <ImageView
+                    android:id="@+id/img_2_cmnd"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/spr_bg_item_product_home"
+                    android:padding="@dimen/dp5"
+                    android:src="@drawable/ic_camera_color"
+                    app:layout_constraintDimensionRatio="2:1.3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/img_1_cmnd"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.43" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txt_title_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/bg_app"
+                android:padding="@dimen/dp10"
+                android:text="Thông tin tài khoản ngân hàng"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_user"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_cmnd_number" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_bankname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_lable_name_bank_ctv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Ngân hàng:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@id/edt_name_bank_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edt_name_bank_ctv" />
+
+                <TextView
+                    android:id="@+id/edt_name_bank_ctv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:focusable="false"
+                    android:gravity="center_vertical|right"
+                    android:paddingTop="@dimen/dp5"
+                    android:paddingRight="@dimen/height_spinner"
+                    android:paddingBottom="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_lable_name_bank_ctv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/bg_app"
+                    app:layout_constraintBottom_toBottomOf="@+id/edt_name_bank_ctv"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edt_name_bank_ctv"
+                    app:layout_constraintWidth_percent="0.07" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_number_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_lable_number_bank_ctv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Số tài khoản:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <EditText
+                    android:id="@+id/edt_number_bank_ctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:padding="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_name_tk_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_address_ctv">
+
+                <TextView
+                    android:id="@+id/txt_lable_name_tk_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:text="Tên tài khoản:"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/edt_number_bank_ctv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edt_number_bank_ctv" />
+
+                <EditText
+                    android:id="@+id/edt_name_tk_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:backgroundTint="@color/white"
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters"
+                    android:padding="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textColorHint="@color/txt_introduce_hide"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_lable_number_bank_ctv"
+                    app:layout_constraintTop_toBottomOf="@id/txt_title_bank" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_hoahong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_bonus"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:src="@drawable/ic_bonus_ctvpng"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.08" />
+
+                <ImageView
+                    android:id="@+id/icon_next_right"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/pading_icon"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/bg_app"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.08" />
+
+                <TextView
+                    android:id="@+id/txt_title_bonus"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="@dimen/pading_icon"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp5"
+                    android:text="Số dư hoa hồng hiện tai: 3500đ"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/icon_bonus"
+                    app:layout_constraintEnd_toStartOf="@+id/icon_next_right"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/icon_bonus"
+                    app:layout_constraintTop_toTopOf="@+id/icon_bonus"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view_bank"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/pading_icon"
+                android:background="@color/gray_bg_ctv_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_name_ctv" />
+
+            <LinearLayout
+                android:id="@+id/ll_update_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title_update_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/bg_app"
+                    android:padding="@dimen/dp10"
+                    android:text="Nâng cấp tài khoản"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_user"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_bank" />
+
+                <TextView
+
+                    android:id="@+id/txt_guild_update_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp7"
+                    android:layout_marginRight="@dimen/dp7"
+                    android:gravity="center"
+                    android:padding="@dimen/dp5"
+                    android:text="@string/title_guild_update_user"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_15sp" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp5">
+
+                    <EditText
+                        android:id="@+id/edt_code_ctv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/pading_icon"
+                        android:background="@drawable/spr_edt_otp"
+                        android:gravity="center"
+                        android:hint="- Mã giới thiệu"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapCharacters"
+                        android:padding="@dimen/dp10"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textCursorDrawable="@color/black"
+                        android:textSize="@dimen/txt_15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent="0.5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_update_info"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_spinner"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_top_fragment_order"
+                android:layout_marginBottom="@dimen/dp10"
+                android:background="@drawable/spr_btn_login"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:text="Cập nhật"
+
+                android:textColor="@color/white"
+                app:layout_constraintDimensionRatio="5:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_title_bank"
+                app:layout_constraintWidth_percent="0.4" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

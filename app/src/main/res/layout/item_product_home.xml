@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/pading_icon"
+    android:background="@drawable/spr_bg_item_product_home"
+    android:padding="@dimen/stoker_edt">
+
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/txt_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:minLines="2"
+        android:padding="1dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintEnd_toEndOf="@+id/img_product"
+        app:layout_constraintStart_toStartOf="@+id/img_product"
+        app:layout_constraintTop_toBottomOf="@+id/img_product" />
+
+    <TextView
+        android:id="@+id/txt_price_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:text="0 đ"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/txt_11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_prime"
+        app:layout_constraintStart_toEndOf="@+id/txt_prime"
+        app:layout_constraintTop_toTopOf="@+id/txt_prime" />
+
+    <View
+        android:id="@+id/view_delete"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/txt_price_delete"
+        app:layout_constraintEnd_toEndOf="@+id/txt_price_delete"
+        app:layout_constraintStart_toStartOf="@+id/txt_price_delete"
+        app:layout_constraintTop_toTopOf="@id/txt_price_delete" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/txt_prime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:textColor="@color/red"
+        android:textSize="@dimen/txt_13sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        app:layout_constraintStart_toStartOf="@+id/img_product" />
+
+    <TextView
+        android:id="@+id/txt_commission_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:text="Hoa hồng sp: "
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_13sp"
+        app:layout_constraintTop_toBottomOf="@+id/txt_prime"
+        app:layout_constraintStart_toStartOf="@+id/img_product" />
+
+    <ImageView
+        android:src="@color/gray_table"
+        android:id="@+id/img_product"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="3dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:background="@drawable/spr_price_promotion_ptram"
+        android:id="@+id/txt_commission_phantram"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:layout_marginRight="@dimen/pading_icon"
+        android:text="-0%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img_product"
+        app:layout_constraintTop_toTopOf="@+id/img_product" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

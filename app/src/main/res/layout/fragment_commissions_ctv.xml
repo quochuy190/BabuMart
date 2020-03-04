@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_title_hh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/spr_txt_title_fragment_home"
+        android:gravity="center"
+        android:padding="@dimen/pading_icon"
+        android:text="Tổng số dư hoa hồng hiện tại "
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_total_hh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp7"
+        android:padding="@dimen/pading_icon"
+        android:src="@drawable/ic_bonus_ctvpng"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_hh"
+        app:layout_constraintWidth_percent="0.09"
+
+        />
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp7"
+        android:padding="@dimen/pading_icon"
+        android:src="@drawable/reload"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_hh"
+        app:layout_constraintWidth_percent="0.09"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_total_hh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="0 đ"
+        android:textColor="@color/app_main"
+        android:textSize="@dimen/txt_22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_total_hh"
+        app:layout_constraintEnd_toStartOf="@+id/icon"
+        app:layout_constraintStart_toEndOf="@+id/icon_total_hh"
+        app:layout_constraintTop_toTopOf="@+id/icon_total_hh" />
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp5"
+        android:layout_marginTop="5dp"
+        android:background="@color/bg_fragment_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_total_hh" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:text="Lịch sử trả hoa hồng"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_one" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cv_date_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:background="@drawable/spr_date_view_order"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cv_date_start"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintWidth_percent="0.47">
+
+        <TextView
+            android:id="@+id/txt_date_end"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="9/5/2019"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ic_date_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/pading_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_calender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:1.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cv_date_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_date_view_order"
+        app:layout_constraintDimensionRatio="6:1"
+        app:layout_constraintEnd_toStartOf="@+id/cv_date_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cv_date_end"
+        app:layout_constraintWidth_percent="0.47">
+
+        <TextView
+            android:id="@+id/txt_date_start"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="9/5/2019"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ic_date_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="@dimen/pading_icon"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_calender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:1.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp7"
+        android:background="@drawable/spr_btn_login"
+        android:text="Tìm kiếm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_date_end"
+        app:layout_constraintWidth_percent="0.3" />
+
+
+    <LinearLayout
+
+        android:id="@+id/ll_lable_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/stoker_edt"
+        android:layout_marginTop="@dimen/dp7"
+        android:layout_marginRight="@dimen/stoker_edt"
+        android:background="@color/bg_app"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_search">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0.5dp"
+            android:layout_weight="2.5"
+            android:background="@color/app_main"
+            android:gravity="center"
+            android:padding="@dimen/dp7"
+            android:singleLine="true"
+            android:text="Nội dung"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/green_title_table"
+            android:gravity="center"
+            android:padding="@dimen/pading_icon"
+            android:singleLine="true"
+
+            android:text="Cộng HH"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/app_main"
+            android:gravity="center"
+            android:padding="@dimen/dp7"
+            android:singleLine="true"
+            android:text="Số tiền"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_list_hh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/stoker_edt"
+        android:layout_marginRight="@dimen/stoker_edt"
+        app:layout_constraintBottom_toTopOf="@+id/view_two"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_lable_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/btn_luuy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_top_fragment_order"
+        android:layout_marginBottom="@dimen/pading_icon"
+        android:padding="@dimen/pading_icon"
+        android:text="* Lưu ý số tiền nhập không lớn hơn số dư hiện có"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_11sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.vn.babumart.models.CurrencyEditText
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:id="@+id/edt_currency"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:layout_marginBottom="@dimen/pading_icon"
+        android:background="@drawable/spr_search"
+        android:gravity="center_vertical"
+        android:hint="- Nhập vào số tiền yêu cầu"
+        android:padding="5dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/txt_introduce"
+        android:textCursorDrawable="@color/txt_introduce"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_luuy"
+        app:layout_constraintDimensionRatio="6.5:1"
+        app:layout_constraintStart_toStartOf="@+id/btn_luuy"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_get_money"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_btn_login"
+        android:text="Gửi yêu cầu"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintBottom_toBottomOf="@id/edt_currency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edt_currency"
+        app:layout_constraintTop_toTopOf="@id/edt_currency"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <View
+        android:id="@+id/view_two"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pading_icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="@dimen/pading_icon"
+        android:background="@color/bg_fragment_home"
+        app:layout_constraintBottom_toTopOf="@id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:layout_marginBottom="@dimen/pading_icon"
+        android:text="Yêu cầu trả hoa hồng"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintBottom_toTopOf="@id/edt_currency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

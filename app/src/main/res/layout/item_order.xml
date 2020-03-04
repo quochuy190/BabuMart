@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/pading_icon"
+    android:background="@drawable/spr_bg_item_product_home"
+    android:padding="@dimen/pading_icon">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/txt_code_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:text="Mã ĐH: "
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:singleLine="true"
+        android:gravity="center"
+        app:layout_constraintWidth_percent="0.35"
+        android:id="@+id/txt_item_order_status"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/pading_icon"
+        android:background="@drawable/spr_txt_status_datiepnhan"
+        android:paddingLeft="@dimen/dp5"
+        android:paddingTop="@dimen/stoker_edt"
+        android:paddingRight="@dimen/dp5"
+        android:paddingBottom="@dimen/stoker_edt"
+        android:text="Đang xác nhận"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_item_order_name_CTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pading_txt_item_order"
+
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_item_order_id_CTV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_item_order_status" />
+
+    <TextView
+        android:id="@+id/txt_item_order_id_CTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pading_txt_item_order"
+        app:layout_constraintWidth_percent="0.4"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_item_order_name_CTV"
+        app:layout_constraintTop_toBottomOf="@+id/txt_item_order_status" />
+
+    <ImageView
+        android:id="@+id/icon_time_item_order"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/stoker_edt_register"
+        android:src="@drawable/ic_time"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_item_order_name_CTV"
+        app:layout_constraintWidth_percent="0.06" />
+
+    <TextView
+        android:id="@+id/txt_item_order_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/pading_txt_item_order"
+
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_13sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_time_item_order"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toEndOf="@+id/icon_time_item_order"
+        app:layout_constraintTop_toTopOf="@+id/icon_time_item_order" />
+
+    <ImageView
+        android:id="@+id/icon_truck_item_order"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/icon_truck_black"
+
+        app:layout_constraintBottom_toBottomOf="@id/icon_time_item_order"
+        app:layout_constraintDimensionRatio="1.5:1"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/icon_time_item_order"
+        app:layout_constraintWidth_percent="0.07" />
+
+    <TextView
+        android:id="@+id/txt_item_soon_order_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/pading_txt_item_order"
+
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_13sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_time_item_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon_truck_item_order"
+        app:layout_constraintTop_toTopOf="@+id/icon_time_item_order" />
+    <TextView
+
+        android:id="@+id/txt_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Người nhận:"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_time_item_order" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_item_order_customer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1"
+        android:background="@drawable/spr_customer_item_order"
+        android:padding="@dimen/pading_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/icon_customer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_user_customer"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_phone_customer"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/icon_phone_customer"
+            app:layout_constraintWidth_percent="0.05" />
+
+        <TextView
+            android:id="@+id/txt_item_order_name_customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/pading_txt_item_order"
+            android:singleLine="true"
+
+            android:textColor="@color/orange"
+            android:textSize="@dimen/txt_14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_customer"
+            app:layout_constraintEnd_toEndOf="@+id/guideline"
+            app:layout_constraintStart_toEndOf="@+id/icon_customer"
+            app:layout_constraintTop_toTopOf="@+id/icon_customer" />
+
+        <ImageView
+            android:id="@+id/icon_phone_customer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_phone_customer"
+            app:layout_constraintDimensionRatio="0.65:1.3"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.04" />
+
+        <TextView
+            android:id="@+id/txt_phone_customer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading_txt_item_order"
+            android:paddingLeft="@dimen/pading_txt_item_order"
+            android:singleLine="true"
+
+            android:textColor="@color/orange"
+            android:textSize="@dimen/txt_14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_phone_customer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_phone_customer"
+            app:layout_constraintTop_toTopOf="@+id/icon_phone_customer" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/txt_item_order_total_prime_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pading_txt_item_order"
+        android:text="Tổng tiền: "
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_item_order_customer" />
+
+    <TextView
+        android:id="@+id/txt_item_order_total_prime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pading_txt_item_order"
+
+        android:textColor="@color/red"
+        android:textSize="@dimen/txt_15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_item_order_total_prime_lable"
+        app:layout_constraintTop_toBottomOf="@+id/ll_item_order_customer" />
+</androidx.constraintlayout.widget.ConstraintLayout>

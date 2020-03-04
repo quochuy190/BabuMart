@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar_all" />
+
+    <TextView
+
+        android:id="@+id/txt_notify_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp5"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp1"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/app_main"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="@id/webview_content"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <TextView
+        android:id="@+id/txt_notify_time"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp7"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp1"
+        android:singleLine="true"
+        android:text="12/12/2019  09:30"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_13sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/txt_notify_name"
+        app:layout_constraintStart_toEndOf="@+id/txt_notify_name"
+        app:layout_constraintTop_toTopOf="@+id/txt_notify_name" />
+
+
+    <WebView
+        android:id="@+id/webview_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp15"
+        android:padding="@dimen/dp7"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_notify_name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

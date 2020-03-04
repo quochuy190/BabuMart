@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item_commission"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/button"
+        app:layout_constraintDimensionRatio="6.5:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_time_history_hh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="0.5dp"
+            android:layout_weight="2.5"
+            android:background="@color/gray_table_commis"
+            android:gravity="left"
+            android:maxLines="3"
+            android:paddingLeft="@dimen/dp1"
+            android:paddingTop="@dimen/pading_icon"
+            android:paddingRight="@dimen/dp1"
+            android:paddingBottom="@dimen/pading_icon"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp" />
+
+        <TextView
+            android:id="@+id/txt_value_add_history_hh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/green_title_table"
+            android:gravity="right"
+            android:paddingLeft="@dimen/dp1"
+            android:paddingTop="@dimen/pading_icon"
+            android:paddingRight="@dimen/dp1"
+            android:paddingBottom="@dimen/pading_icon"
+            android:singleLine="true"
+            android:textColor="@color/white"
+
+            android:textSize="@dimen/txt_14sp"
+            android:visibility="gone" />
+
+        <TextView
+
+            android:id="@+id/txt_value_total_history_hh"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0.5dp"
+            android:layout_weight="1"
+            android:background="@color/gray_table_commis"
+            android:gravity="right|center_vertical"
+            android:paddingLeft="@dimen/dp1"
+            android:paddingTop="@dimen/pading_icon"
+            android:paddingRight="@dimen/dp1"
+            android:paddingBottom="@dimen/pading_icon"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_14sp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_title_hh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/spr_txt_title_fragment_home"
+        android:gravity="center"
+        android:padding="@dimen/pading_txt_item_order"
+        android:text="Tổng số dư hoa hồng hiện tại "
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_total_hh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_bonus_ctvpng"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_hh"
+        app:layout_constraintWidth_percent="0.1"
+
+        />
+
+    <TextView
+        android:id="@+id/txt_total_hh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="1.000.000 đ"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/txt_25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_total_hh"
+        app:layout_constraintStart_toEndOf="@+id/icon_total_hh"
+        app:layout_constraintTop_toTopOf="@+id/icon_total_hh" />
+
+    <View
+        android:id="@+id/view_one"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/bg_fragment_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_total_hh" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="5dp"
+        android:text="Danh sách hoa hồng CTV"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_one" />
+
+    <EditText
+        android:id="@+id/edt_search_hh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:background="@drawable/spr_search"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/txt_introduce"
+        android:textCursorDrawable="@color/txt_introduce"
+        app:layout_constraintEnd_toStartOf="@+id/btn_filter"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/pading_icon"
+        android:layout_marginRight="@dimen/pading_icon"
+        android:padding="2dp"
+        android:src="@drawable/ic_search_appbar"
+        app:layout_constraintBottom_toBottomOf="@+id/edt_search_hh"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/edt_search_hh"
+        app:layout_constraintTop_toTopOf="@+id/edt_search_hh" />
+
+    <Button
+        android:id="@+id/btn_filter"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_btn_fragment_order"
+        android:text="Tìm kiếm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_user"
+        app:layout_constraintBottom_toBottomOf="@id/edt_search_hh"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/edt_search_hh"
+        app:layout_constraintTop_toTopOf="@id/edt_search_hh"
+        app:layout_constraintWidth_percent="0.3" />
+    <LinearLayout
+        android:layout_marginTop="@dimen/pading_icon"
+        android:layout_marginLeft="@dimen/stoker_edt"
+        android:layout_marginRight="@dimen/stoker_edt"
+        android:background="@color/green_stroke"
+        android:id="@+id/ll_lable_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_search_hh">
+
+        <TextView
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_margin="0.5dp"
+            android:background="@color/green_title_table"
+            android:textSize="@dimen/txt_14sp"
+            android:textColor="@color/white"
+            android:text="Tên CTV"
+            android:layout_weight="1.5"
+            android:padding="@dimen/pading_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_margin="0.5dp"
+            android:background="@color/green_title_table"
+            android:textSize="@dimen/txt_14sp"
+            android:textColor="@color/white"
+            android:text="Mã CTV"
+
+            android:layout_weight="1"
+            android:padding="@dimen/pading_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:gravity="center"
+            android:singleLine="true"
+            android:layout_margin="0.5dp"
+            android:background="@color/green_title_table"
+            android:textSize="@dimen/txt_14sp"
+            android:textColor="@color/white"
+            android:text="Số dư hoa hồng"
+            android:layout_weight="1.2"
+            android:padding="@dimen/pading_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="@dimen/stoker_edt"
+        android:layout_marginRight="@dimen/stoker_edt"
+        android:id="@+id/recycle_list_hh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_lable_list">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

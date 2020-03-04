@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1072691915229",
+    "firebase_url": "https://gadongtao-7ba46.firebaseio.com",
+    "project_id": "gadongtao-7ba46",
+    "storage_bucket": "gadongtao-7ba46.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1072691915229:android:c47adc4ca26a1042396e34",
+        "android_client_info": {
+          "package_name": "com.vn.babumart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1072691915229-rv674vgpeo91evoke9n97e1o0024sp1g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALT4EWPr41BlA2NndThYtdGGlBKVqjCuQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1072691915229-rv674vgpeo91evoke9n97e1o0024sp1g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

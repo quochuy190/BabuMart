@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar_all" />
+
+    <TextView
+        android:id="@+id/txt_lable_choose_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:text="Chọn kiểu thống kê"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_choose_option"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_choose_option" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_choose_option"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/dp7"
+        android:layout_marginTop="@dimen/margin_top_fragment_order"
+        android:layout_marginRight="@dimen/dp7"
+        android:background="@drawable/spr_date_view_order"
+        app:layout_constraintDimensionRatio="7.3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_lable_choose_option"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar">
+
+
+        <TextView
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_15sp"
+            android:id="@+id/txt_option"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_down_filter_CTV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+          <!--  android:dropDownVerticalOffset="50dp"-->
+        </TextView>
+
+        <ImageView
+            android:id="@+id/img_down_filter_CTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/spr_btn_down_view_order"
+            android:padding="2dp"
+            android:src="@drawable/ic_down"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_choose_year"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:background="@drawable/spr_date_view_order"
+        app:layout_constraintDimensionRatio="5.5:1"
+        app:layout_constraintEnd_toStartOf="@+id/ll_choose_month"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_choose_option"
+        app:layout_constraintWidth_percent="0.47">
+
+        <TextView
+            android:id="@+id/txt_year"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="2019"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_year"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/pading_icon"
+            android:padding="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_calender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:1.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_choose_month"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/pading_icon"
+
+        android:background="@drawable/spr_date_view_order"
+        app:layout_constraintDimensionRatio="5.5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/ll_choose_year"
+        app:layout_constraintTop_toBottomOf="@+id/ll_choose_option"
+        app:layout_constraintWidth_percent="0.47">
+
+        <TextView
+            android:id="@+id/txt_month"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Tháng 1"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_month"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/pading_icon"
+            android:padding="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_calender"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="2:1.8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_search_report"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:background="@drawable/spr_btn_fragment_order"
+        android:text="Tìm kiếm"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_user"
+        app:layout_constraintDimensionRatio="4:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_choose_year"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <View
+        android:id="@+id/view_search"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pading_icon"
+        android:layout_marginTop="@dimen/pading_icon"
+        android:background="@color/bg_fragment_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_search_report" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

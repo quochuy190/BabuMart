@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="1dp"
+    android:layout_marginTop="@dimen/dp1"
+    android:layout_marginRight="1dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/img_product"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="0.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/white"
+        android:padding="@dimen/pading_icon"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_info_product"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ll_info_product"
+        app:layout_constraintWidth_percent="0.27" />
+
+
+    <LinearLayout
+        android:paddingLeft="@dimen/stoker_edt"
+        android:id="@+id/ll_info_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:layout_marginRight="0.5dp"
+        android:background="@drawable/spr_item_language"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/txt_sl_product"
+        app:layout_constraintStart_toEndOf="@+id/img_product"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="@dimen/dp1"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp" />
+
+        <TextView
+            android:id="@+id/txt_title_commission"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dp1"
+            android:singleLine="true"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="Giá: "
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp1"
+                android:singleLine="true"
+                android:textColor="@color/txt_introduce"
+                android:textSize="@dimen/txt_14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_title_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp1"
+                android:singleLine="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/txt_15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/txt_title"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_price_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/dp1"
+                android:singleLine="true"
+                android:text="0đ"
+                android:textColor="@color/txt_introduce"
+                android:textSize="@dimen/txt_14sp"
+                app:layout_constraintStart_toEndOf="@+id/txt_title_price"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_delete"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@id/txt_price_delete"
+                app:layout_constraintEnd_toEndOf="@id/txt_price_delete"
+                app:layout_constraintStart_toStartOf="@id/txt_price_delete"
+                app:layout_constraintTop_toTopOf="@+id/txt_price_delete" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <TextView
+            android:id="@+id/txt_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dp1"
+            android:singleLine="true"
+
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp" />
+        <TextView
+            android:id="@+id/txt_hoahong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/dp1"
+            android:singleLine="true"
+
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp" />
+        <TextView
+            android:id="@+id/txt_thuoctinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="@dimen/dp1"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_14sp" />
+    </LinearLayout>
+
+    <TextView
+
+        android:id="@+id/txt_sl_product"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/pading_icon"
+        android:singleLine="true"
+        android:text="SL"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_13sp"
+        app:layout_constraintBottom_toTopOf="@id/txt_minus_num"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_add_num"
+        app:layout_constraintWidth_percent="0.083" />
+
+    <TextView
+
+        android:id="@+id/txt_total_price"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="0.5dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical|right"
+        android:padding="@dimen/pading_icon"
+        android:singleLine="true"
+        android:text="SL"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_13sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_sl_product"
+        app:layout_constraintTop_toTopOf="@id/img_product" />
+
+    <TextView
+        android:id="@+id/txt_add_num"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/spr_item_language"
+        android:gravity="center"
+        android:padding="@dimen/pading_icon"
+        android:text="+"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/txt_sl_product"
+        app:layout_constraintStart_toStartOf="@+id/txt_sl_product"
+        app:layout_constraintTop_toTopOf="@id/img_product" />
+
+    <TextView
+        android:id="@+id/txt_minus_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spr_item_language"
+        android:gravity="center"
+        android:padding="@dimen/pading_icon"
+        android:text="-"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/img_product"
+        app:layout_constraintEnd_toEndOf="@+id/txt_sl_product"
+        app:layout_constraintStart_toStartOf="@+id/txt_sl_product" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/ll_info_product"
+        app:layout_constraintStart_toStartOf="@id/ll_info_product"
+        app:layout_constraintTop_toTopOf="@id/ll_info_product" />
+
+    <View
+        android:layout_width="0.5dp"
+        android:layout_height="0dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="@id/ll_info_product"
+        app:layout_constraintEnd_toEndOf="@id/ll_info_product"
+        app:layout_constraintTop_toTopOf="@id/ll_info_product" />
+</androidx.constraintlayout.widget.ConstraintLayout>

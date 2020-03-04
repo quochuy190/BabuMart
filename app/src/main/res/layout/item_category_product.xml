@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/pading_icon"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <TextView
+        app:layout_constraintEnd_toStartOf="@+id/icon_down"
+        android:padding="@dimen/dp7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/txt_title_objservice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:singleLine="true"
+        android:text="Mỹ phẩm làm sạch"
+        android:textColor="@color/red_app_main"
+        android:textSize="@dimen/txt_user" />
+    <ImageView
+        android:id="@+id/icon_down"
+        android:tint="@color/red_app_main"
+        android:src="@drawable/ic_down"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="@id/txt_title_objservice"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_title_objservice"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginLeft="@dimen/pading_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_title_objservice"
+        android:id="@+id/recycle_lis_objservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

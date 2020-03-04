@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/pading_icon"
+    android:id="@+id/item_request"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/spr_bg_item_request_hh"
+    android:padding="@dimen/dp7">
+
+    <TextView
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:id="@+id/txt_name_ctv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:id="@+id/txt_usercode_ctv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name_ctv" />
+
+
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_usercode_ctv" />
+
+
+    <TextView
+
+        android:id="@+id/txt_sodu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_time" />
+
+    <TextView
+        android:text="Yêu cầu rút: "
+        android:id="@+id/txt_balance_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sodu" />
+
+    <TextView
+        android:id="@+id/txt_num_rut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toEndOf="@+id/txt_balance_title"
+        app:layout_constraintTop_toBottomOf="@+id/txt_sodu" />
+    
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:layout_marginRight="@dimen/pading_icon"
+        android:background="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/txt_balance_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp5"
+        android:text="Trạng thái: "
+        android:id="@+id/txt_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+
+        android:text="Nội dung: "
+        android:id="@+id/txt_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/pading_icon"
+        android:padding="@dimen/dp1"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_status" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

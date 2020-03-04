@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="@dimen/dp20"
+    android:layout_marginRight="@dimen/dp20"
+    android:background="@drawable/spr_dialog_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:id="@+id/txt_warning_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_fragment_order"
+        android:padding="@dimen/pading_icon"
+        android:text="Chọn trạng thái"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_user"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/view_title"
+        app:layout_constraintTop_toBottomOf="@+id/txt_warning_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/gray" />
+    <TextView
+        android:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/view_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_width="0dp"
+        android:id="@+id/txt_datiepnhan"
+
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:text="Đã tiếp nhận"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/txt_datiepnhan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_width="0dp"
+        android:id="@+id/txt_dangchoduyet"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:text="Đang xử lý"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp" />
+
+    <TextView
+        android:id="@+id/txt_dangchuyen"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dangchoduyet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:text="Đang vận chuyển"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp" />
+
+    <TextView
+        android:id="@+id/txt_hoanthanh"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dangchuyen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:text="Đã hoàn thành"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp" />
+
+    <TextView
+        android:id="@+id/txt_huy"
+        app:layout_constraintTop_toBottomOf="@+id/txt_hoanthanh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="center"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:text="Huỷ đơn"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_15sp" />
+    <TextView
+        android:id="@+id/txt_back"
+        app:layout_constraintTop_toBottomOf="@+id/txt_huy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_top_fragment_order"
+        android:gravity="center"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:text="Trở lại"
+        android:textColor="@color/red"
+        android:textSize="@dimen/txt_15sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

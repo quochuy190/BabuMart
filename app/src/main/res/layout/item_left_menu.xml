@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/spr_item_language"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:padding="@dimen/margin_top_fragment_order">
+
+    <ImageView
+        android:id="@+id/icon_left_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/stoker_edt"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.12" />
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/txt_name_leftmenu"
+        android:fontFamily="@font/roboto_medium"
+        android:padding="@dimen/pading_icon"
+        android:textColor="@color/app_main"
+        android:textSize="@dimen/txt_user"
+        android:text="Thông tin CTV"
+        android:gravity="center_vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/icon_left_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon_left_menu"
+        app:layout_constraintTop_toTopOf="@+id/icon_left_menu" />
+</androidx.constraintlayout.widget.ConstraintLayout>

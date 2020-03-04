@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--activiy introduce-->
+    <dimen name="margin_top_introduce">17dp</dimen>
+    <dimen name="txt_title_im_beautiful">20sp</dimen>
+    <dimen name="txt_content_im_beautiful">16sp</dimen>
+    <dimen name="txt_btn_login">25sp</dimen>
+
+    <!--activity login-->
+    <dimen name="margin_login">18dp</dimen>
+    <dimen name="margin_top_btn_login">40dp</dimen>
+    <dimen name="pading_icon">5dp</dimen>
+    <dimen name="dp7">7.5dp</dimen>
+    <dimen name="dp5">5.5dp</dimen>
+    <dimen name="txt_11sp">12sp</dimen>
+    <dimen name="txt_user">18sp</dimen>
+    <dimen name="txt_15sp">16.5sp</dimen>
+    <dimen name="txt_30sp">33sp</dimen>
+    <dimen name="txt_25sp">27sp</dimen>
+    <dimen name="txt_23sp">24sp</dimen>
+    <dimen name="txt_14sp">15sp</dimen>
+    <dimen name="txt_13sp">14sp</dimen>
+    <dimen name="txt_12sp">13sp</dimen>
+    <dimen name="txt_18sp">19sp</dimen>
+    <!--activity register-->
+    <dimen name="pading_edt_register">17dp</dimen>
+    <dimen name="stoker_edt_register">3.5dp</dimen>
+    <dimen name="margin_top_edt_register">17dp</dimen>
+    <!--activity confirm otp-->
+    <dimen name="stoker_edt">3dp</dimen>
+    <dimen name="dp1">1.6dp</dimen>
+    <!--Fragment order-->
+    <dimen name="margin_top_fragment_order">12dp</dimen>
+    <dimen name="pading_txt_item_order">5dp</dimen>
+    <dimen name="size_height_car">24dp</dimen>
+    <dimen name="height_bar_hh_detail">320dp</dimen>
+    <dimen name="height_bar_search">195dp</dimen>
+    <dimen name="dp20">21dp</dimen>
+
+    <dimen name="height_spinner">38dp</dimen>
+    <dimen name="height_appbar">48dp</dimen>
+</resources>

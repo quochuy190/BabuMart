@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar_all" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/llct_chart_all"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/spr_item_language"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/icon_left"
+            android:padding="@dimen/pading_txt_item_order"
+            android:src="@drawable/ic_left_menu_info_chart"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pading_icon"
+            android:singleLine="true"
+            android:id="@+id/txt_name_leftmenu"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="@dimen/pading_icon"
+            android:textColor="@color/app_main"
+            android:textSize="@dimen/txt_15sp"
+            android:text="Báo cáo doanh số chung"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/icon_left"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_left"
+            app:layout_constraintTop_toTopOf="@+id/icon_left" />
+
+        <ImageView
+
+            android:tint="@color/app_main"
+            android:src="@drawable/ic_right"
+            app:layout_constraintDimensionRatio="1:1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icon_left"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_left"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ll_chart_2"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+        <ImageView
+            android:id="@+id/icon_left_2"
+            android:padding="@dimen/pading_txt_item_order"
+            android:src="@drawable/ic_product"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/ll_chart_mathang"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pading_icon"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="@dimen/pading_icon"
+            android:textColor="@color/app_main"
+            android:textSize="@dimen/txt_15sp"
+            android:text="Thống kê theo mặt hàng"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/icon_left_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_left_2"
+            app:layout_constraintTop_toTopOf="@+id/icon_left_2" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:background="@drawable/spr_item_language"
+            android:id="@+id/llct_chart_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon_left_2"
+            app:layout_constraintStart_toEndOf="@+id/gl_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+
+                android:layout_marginTop="@dimen/pading_txt_item_order"
+                android:id="@+id/icon_left_2_1"
+                android:padding="@dimen/pading_icon"
+                android:src="@drawable/ic_chart_time"
+                app:layout_constraintWidth_percent="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+            <TextView
+
+                android:layout_marginLeft="@dimen/pading_icon"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="@dimen/pading_icon"
+                android:textColor="@color/app_main"
+                android:textSize="@dimen/txt_14sp"
+                android:text="Thống kê theo khoảng thời gian"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/icon_left_2_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon_left_2_1"
+                app:layout_constraintTop_toTopOf="@+id/icon_left_2_1" />
+            <ImageView
+                android:tint="@color/app_main"
+                android:src="@drawable/ic_right"
+                app:layout_constraintDimensionRatio="1:1.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/icon_left_2_1"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_left_2_1"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:visibility="gone"
+            android:id="@+id/llct_chart_biendong"
+            android:background="@drawable/spr_item_language"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llct_chart_time"
+            app:layout_constraintStart_toEndOf="@+id/gl_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginTop="@dimen/pading_txt_item_order"
+                android:id="@+id/icon_left_2_2"
+                android:padding="@dimen/pading_icon"
+                android:src="@drawable/ic_chart_bd"
+                app:layout_constraintWidth_percent="0.09"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+            <TextView
+
+                android:layout_marginLeft="@dimen/pading_icon"
+                android:singleLine="true"
+                android:fontFamily="@font/roboto_medium"
+                android:padding="@dimen/pading_icon"
+                android:textColor="@color/app_main"
+                android:textSize="@dimen/txt_14sp"
+                android:text="Thống kê theo biến động"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/icon_left_2_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/icon_left_2_2"
+                app:layout_constraintTop_toTopOf="@+id/icon_left_2_2" />
+            <ImageView
+                android:tint="@color/app_main"
+                android:src="@drawable/ic_right"
+                app:layout_constraintDimensionRatio="1:1.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/icon_left_2_2"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_left_2_2"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:tint="@color/app_main"
+            android:src="@drawable/ic_right"
+            app:layout_constraintDimensionRatio="1:1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icon_left_2"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_left_2"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/llct_chart_ctv"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:padding="@dimen/margin_top_fragment_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/icon_left_3"
+            android:padding="@dimen/pading_txt_item_order"
+            android:src="@drawable/ic_ctv"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:background="@drawable/spr_item_language"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/pading_icon"
+            android:singleLine="true"
+            android:fontFamily="@font/roboto_medium"
+            android:padding="@dimen/pading_icon"
+            android:textColor="@color/app_main"
+            android:textSize="@dimen/txt_15sp"
+            android:text="Thống kê theo CTV"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/icon_left_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/icon_left_3"
+            app:layout_constraintTop_toTopOf="@+id/icon_left_3" />
+
+        <ImageView
+            android:tint="@color/app_main"
+            android:src="@drawable/ic_right"
+            app:layout_constraintDimensionRatio="1:1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/icon_left_3"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_left_3"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

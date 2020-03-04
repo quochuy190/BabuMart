@@ -1,0 +1,56 @@
+<resources>
+    <string name="FACEBOOK_APP_ID">567418220783914</string>
+    <string name="app_name">BaBu Mart</string>
+    <string name="facebook_app_id">567418220783914</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="hide_search">Tìm kiếm ...</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="title_home">Trang chủ</string>
+    <string name="title_order">Đơn hàng</string>
+    <string name="title_product">Sản phẩm</string>
+    <string name="title_ducuments">Hoa hồng</string>
+    <!--base-->
+    <string name="txt_loading_dialog">Đang tải. Vui lòng đợi...</string>
+    <string name="error_network">Lỗi kết nối</string>
+    <string name="error">Lỗi</string>
+    <string name="error_network_message">Lỗi kết nối, vui lòng kiểm tra mạng và thử lại</string>
+    <!--activity introduce-->
+    <string name="title_im_beautiful">IGO</string>
+    <string name="txt_content_im_beautiful"></string>
+    <string name="txt_change_login">Đăng nhập TẠI ĐÂY nếu đã có tài khoản</string>
+    <string name="txt_title_input_money">Nhập vào số tiền bạn muốn thanh toán cho CTV</string>
+    <string name="txt_guild_up_face">* Hướng dẫn quảng cáo sản phẩm:\n
+- Bấm vào nút Chia sẻ Facebook để đẩy toàn bộ hình ảnh/video sản phẩm sang Facebook của bạn. Phần text đã được copy sẵn, bạn chỉ việc dán vào nội dung bài viết.\n
+- Bấm vào nút Tải ảnh về máy để tải toàn bộ ảnh/video sản phẩm về máy của bạn để đăng lên các nền tảng khác\n
+- Bấm vào nút Copy link sản phẩm để gửi link sản phẩm này cho khách hàng của bạn qua Zalo, Messenger, ...\n
+- Bấm vào nút Copy link danh mục để gửi link bao gồm tất cả các sản phẩm cùng loại với sản phẩm này cho khách hàng chọn qua Zalo, Messenger, ...\n
+- Bấm vào nút Copy text giới thiệu để copy bài viết giới thiệu sản phẩm để dán vào Zalo, Messenger, ...\n
+
+    </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="txt_copy_text"><i><u>Copy text</u></i></string>
+    <string name="txt_copy_link_catalog"><i><u>Copy link catalog</u></i></string>
+    <string name="txt_shiper"><i><u>Chính sách vận chuyển</u></i></string>
+    <string name="txt_guild_sell"><i><u>Hướng dẫn bán hàng</u></i></string>
+    <string name="title_trangthai">Vui lòng chọn trạng thái</string>
+    <string name="title_des_product">Mô tả sản phẩm</string>
+    <string name="txt_guild_guest_product_detail">Hãy đăng ký tài khoản để được mua sản phẩm này với giá gốc và tham gia bán hàng cùng IGO SHOPPING và hưởng hoa hồng CỰC SỐC.</string>
+    <string name="title_distcount"> Bạn có thể nhập yêu cầu giảm giá với số tiền không quá số hoa hồng của chính đơn hàng này.
+</string>
+    <string name="title_guild_update_user">Để nâng cấp thành tài khoản CTV bạn cần nhập vào mã giới thiệu</string>
+    <string name="txt_radio_ghn">Giao hàng nhanh</string>
+    <string name="txt_radio_other">Lấy hàng tại kho</string>
+
+</resources>

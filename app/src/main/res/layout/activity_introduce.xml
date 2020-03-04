@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_spinner"
+        android:padding="@dimen/dp5"
+        app:layout_constraintDimensionRatio="1.5:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <LinearLayout
+        android:id="@+id/ll_introduce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_introduce"
+        android:background="@drawable/spr_txt_introduce"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/txt_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:padding="@dimen/stoker_edt"
+            android:text="@string/title_im_beautiful"
+            android:textColor="@color/nau"
+            android:textSize="@dimen/txt_title_im_beautiful"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_shop_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:minLines="5"
+            android:padding="3dp"
+            android:textColor="@color/txt_introduce"
+            android:textSize="@dimen/txt_user" />
+
+        <TextView
+            android:id="@+id/txt_showmore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="2sp"
+            android:text="Xem thêm"
+            android:textColor="@color/app_main" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_introduce"
+        android:background="@drawable/spr_btn_login"
+        android:text="Đăng nhập"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_introduce"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_introduce"
+        android:background="@drawable/spr_btn_register"
+        android:text="Đăng ký"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <Button
+        android:id="@+id/btn_login_shopid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_introduce"
+        android:background="@drawable/spr_btn_login_shopid"
+        android:text="chọn shop khác"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <LinearLayout
+        android:id="@+id/ll_introduce_full"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_introduce"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/spr_txt_introduce"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_logo"
+        app:layout_constraintWidth_percent="0.9">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_des_full"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:padding="@dimen/dp5"
+                    android:textColor="@color/txt_introduce"
+                    android:textSize="@dimen/txt_content_im_beautiful" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ic_gone_full"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp7"
+        android:src="@drawable/ic_delete_white"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@+id/ll_introduce_full"
+        app:layout_constraintTop_toTopOf="@+id/ll_introduce_full"
+        app:layout_constraintWidth_percent="0.07" />
+</androidx.constraintlayout.widget.ConstraintLayout>

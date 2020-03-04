@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_item_report_product"
+    android:background="@color/white">
+
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/txt_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/txt_pantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/txt_sanluong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:singleLine="true"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+
+        android:id="@+id/txt_doanhso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_weight="1.5"
+        android:gravity="right"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+
+        android:textColor="@color/orange"
+        android:textSize="@dimen/txt_12sp" />
+
+</LinearLayout>

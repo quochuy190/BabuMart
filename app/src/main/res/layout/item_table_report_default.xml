@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/txt_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:text="Năm"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/txt_quantity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:text="SL"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+
+        android:id="@+id/txt_doanhso"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="2"
+        android:gravity="right"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:text="Doanh số"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/txt_hh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="right"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:text="Hoa hồng"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <TextView
+        android:id="@+id/txt_thucthu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="2"
+        android:gravity="right"
+        android:paddingLeft="@dimen/stoker_edt"
+        android:paddingTop="@dimen/dp7"
+        android:paddingRight="@dimen/stoker_edt"
+        android:paddingBottom="@dimen/dp7"
+        android:text="Thực thu"
+        android:textColor="@color/txt_introduce"
+        android:textSize="@dimen/txt_12sp" />
+
+</LinearLayout>

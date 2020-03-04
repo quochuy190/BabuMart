@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vn.vnpthn_bhkv2.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_appbar"
+            android:background="@color/app_main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/MyActionBarTheme">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/dp7"
+                    android:gravity="center_vertical"
+                    android:paddingRight="20dp"
+                    android:id="@+id/edt_search_main"
+                    android:textColor="@color/txt_introduce"
+                    android:textCursorDrawable="@color/txt_introduce"
+                    android:padding="5dp"
+                    app:layout_constraintHeight_percent="0.6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_cart_appbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/spr_edt_search_appbar" />
+                <TextView
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_user"
+                    android:gravity="center_vertical"
+                    android:id="@+id/txt_title_main"
+                    android:textColor="@color/white"
+                    app:layout_constraintHeight_percent="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    />
+            <ImageView
+                android:padding="1.5dp"
+                android:src="@drawable/ic_search_appbar"
+                android:layout_marginRight="@dimen/pading_icon"
+                android:layout_marginEnd="@dimen/pading_icon"
+                app:layout_constraintBottom_toBottomOf="@+id/edt_search_main"
+                app:layout_constraintTop_toTopOf="@+id/edt_search_main"
+                app:layout_constraintEnd_toEndOf="@+id/edt_search_main"
+                app:layout_constraintDimensionRatio="1:1"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+                <ImageView
+                    android:padding="@dimen/dp10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.9"
+                    android:id="@+id/ic_notify_appbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/ic_notify"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+                <ImageView
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.9"
+                    android:padding="@dimen/dp7"
+                    android:id="@+id/ic_chat_main"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_call_main"
+                    android:src="@drawable/ic_call_main"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+                <ImageView
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.9"
+                    android:padding="@dimen/dp7"
+                    android:id="@+id/ic_zalo_main"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_chat_main"
+                    android:src="@drawable/icon_zalo"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+                <ImageView
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.9"
+                    android:padding="@dimen/dp7"
+                    android:id="@+id/ic_call_main"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_cart_appbar"
+                    android:src="@drawable/ic_chat_main"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+                <ImageView
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHeight_percent="0.9"
+                    android:padding="@dimen/dp10"
+                    android:id="@+id/ic_cart_appbar"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ic_notify_appbar"
+                    android:src="@drawable/ic_cart"
+                    app:layout_constraintDimensionRatio="1:1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+                <TextView
+                    android:visibility="gone"
+                    android:fontFamily="@font/aclonica_regular"
+
+                    android:layout_margin="@dimen/dp1"
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="@+id/ic_notify_appbar"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_notify_appbar"
+                    android:id="@+id/txt_badger_notify"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_11sp"
+                    android:ellipsize="end"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/default_badget"/>
+                <TextView
+                    android:visibility="gone"
+                    android:fontFamily="@font/aclonica_regular"
+                    android:layout_margin="@dimen/dp1"
+                    app:layout_constraintHeight_percent="0.4"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintTop_toTopOf="@+id/ic_cart_appbar"
+                    app:layout_constraintEnd_toEndOf="@+id/ic_cart_appbar"
+                    android:id="@+id/txt_badger_cart"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/txt_11sp"
+                    android:ellipsize="end"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/default_badget"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        layout="@layout/content_main" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

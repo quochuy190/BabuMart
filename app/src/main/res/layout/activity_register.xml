@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_introduce"
+        android:src="@drawable/icon_avata_default"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.27" />
+
+    <ImageView
+        android:id="@+id/img_title"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp7"
+        android:src="@drawable/creat_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.028"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo" />
+
+    <View
+        android:layout_marginTop="@dimen/dp7"
+        android:id="@+id/view_title"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/pading_icon"
+        android:background="@color/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_title"
+        app:layout_constraintWidth_percent="0.3" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/margin_top_edt_register"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_change_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_fullname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.8">
+
+                <EditText
+                    android:layout_marginRight="@dimen/stoker_edt"
+
+                    android:id="@+id/edt_fullname_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Họ tên của bạn"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPersonName|textCapWords"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_fullname"
+                app:layout_constraintWidth_percent="0.8">
+
+                <EditText
+
+                    android:id="@+id/edt_phone_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:hint="Số điện thoại của bạn"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_fullname_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_username"
+                app:layout_constraintWidth_percent="0.8">
+
+                <EditText
+                    android:id="@+id/edt_email_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:hint="Email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_fullname_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+           <!-- <EditText
+                android:id="@+id/edt_email_register"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/pading_edt_register"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray"
+                android:textCursorDrawable="@color/black"
+                android:textSize="@dimen/txt_user"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edt_phone_register"
+                app:layout_constraintWidth_percent="0.8" />-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_email"
+                app:layout_constraintWidth_percent="0.8">
+
+                <EditText
+                    android:id="@+id/edt_city_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Tỉnh/thành phố"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_email_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_city"
+                app:layout_constraintWidth_percent="0.8">
+                <EditText
+                    android:id="@+id/edt_district_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Quận/huyện"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_city_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_ward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_district"
+                app:layout_constraintWidth_percent="0.8">
+                <EditText
+                    android:id="@+id/edt_ward_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:hint="Phường/xã"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_city_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_ward"
+                app:layout_constraintWidth_percent="0.8">
+                <EditText
+                    android:id="@+id/edt_address_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_edt_register"
+                    android:hint="Địa chỉ"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapWords"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_district_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_pass"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_address"
+                app:layout_constraintWidth_percent="0.8">
+                <EditText
+                    android:id="@+id/edt_pass_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mật khẩu (dài hơn 6 ký tự)"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_address_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/ll_pass_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_pass"
+                app:layout_constraintWidth_percent="0.8">
+                <EditText
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/edt_pass_confirm_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Xác nhận mật khẩu"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pass_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="visible"
+                android:id="@+id/ll_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_edt_register"
+                android:padding="@dimen/dp7"
+                app:hintTextAppearance="@style/TextLabeTextInput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ll_pass_confirm"
+                app:layout_constraintWidth_percent="0.8">
+                <EditText
+                    android:backgroundTint="@color/white"
+                    android:id="@+id/edt_code_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="- Mã giới thiệu"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:layout_marginRight="@dimen/stoker_edt"
+                    android:padding="@dimen/stoker_edt"
+                    android:background="@color/white"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textCursorDrawable="@color/black"
+                    android:textSize="@dimen/txt_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edt_pass_confirm_register"
+                    app:layout_constraintWidth_percent="0.8" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <ImageView
+                android:id="@+id/img_done"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:layout_marginBottom="@dimen/margin_top_edt_register"
+                android:padding="5dp"
+                android:src="@drawable/spr_button_done_register"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_code"
+                app:layout_constraintWidth_percent="0.2" />
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_edt_register"
+                android:layout_marginBottom="@dimen/margin_top_edt_register"
+                android:background="@drawable/spr_btn_login"
+                android:text="Cập nhật"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_code"
+                app:layout_constraintWidth_percent="0.3" />
+            <View
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_done"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/txt_change_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/txt_change_login"
+        android:textColor="@color/white_click"
+        android:textSize="@dimen/txt_14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
